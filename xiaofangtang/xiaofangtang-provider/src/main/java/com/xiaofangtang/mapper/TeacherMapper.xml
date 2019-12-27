@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xiaofangtang.mapper.TeacherMapper">
+  <resultMap id="BaseResultMap" type="com.xiaofangtang.model.Teacher">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="tname" jdbcType="VARCHAR" property="tname" />
+    <result column="bumenid" jdbcType="INTEGER" property="bumenid" />
+    <result column="nickname" jdbcType="VARCHAR" property="nickname" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="quanxian" jdbcType="INTEGER" property="quanxian" />
+    <result column="ruzhitime" jdbcType="VARCHAR" property="ruzhitime" />
+    <result column="birth" jdbcType="VARCHAR" property="birth" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, tname, bumenid, nickname, password, quanxian, ruzhitime, birth
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from teacher
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+
+  <select id="getteacher" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from teacher
+  </select>
+
+  <select id="login" parameterType="java.util.Map" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from teacher
+    where tname = #{username,jdbcType=VARCHAR} and password = #{password,jdbcType=VARCHAR}
+  </select>
+
+  <select id="selectteacherBytname" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from teacher
+    where tname = #{tname,jdbcType=VARCHAR}
+  </select>
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from teacher
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.xiaofangtang.model.Teacher">
+    insert into teacher (id, tname, bumenid, 
+      nickname, password, quanxian, 
+      ruzhitime, birth)
+    values (#{id,jdbcType=INTEGER}, #{tname,jdbcType=VARCHAR}, #{bumenid,jdbcType=INTEGER}, 
+      #{nickname,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, #{quanxian,jdbcType=INTEGER}, 
+      #{ruzhitime,jdbcType=VARCHAR}, #{birth,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.xiaofangtang.model.Teacher">
+    insert into teacher
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="tname != null">
+        tname,
+      </if>
+      <if test="bumenid != null">
+        bumenid,
+      </if>
+      <if test="nickname != null">
+        nickname,
+      </if>
+      <if test="password != null">
+        password,
+      </if>
+      <if test="quanxian != null">
+        quanxian,
+      </if>
+      <if test="ruzhitime != null">
+        ruzhitime,
+      </if>
+      <if test="birth != null">
+        birth,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="tname != null">
+        #{tname,jdbcType=VARCHAR},
+      </if>
+      <if test="bumenid != null">
+        #{bumenid,jdbcType=INTEGER},
+      </if>
+      <if test="nickname != null">
+        #{nickname,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null">
+        #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="quanxian != null">
+        #{quanxian,jdbcType=INTEGER},
+      </if>
+      <if test="ruzhitime != null">
+        #{ruzhitime,jdbcType=VARCHAR},
+      </if>
+      <if test="birth != null">
+        #{birth,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.xiaofangtang.model.Teacher">
+    update teacher
+    <set>
+      <if test="tname != null">
+        tname = #{tname,jdbcType=VARCHAR},
+      </if>
+      <if test="bumenid != null">
+        bumenid = #{bumenid,jdbcType=INTEGER},
+      </if>
+      <if test="nickname != null">
+        nickname = #{nickname,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null">
+        password = #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="quanxian != null">
+        quanxian = #{quanxian,jdbcType=INTEGER},
+      </if>
+      <if test="ruzhitime != null">
+        ruzhitime = #{ruzhitime,jdbcType=VARCHAR},
+      </if>
+      <if test="birth != null">
+        birth = #{birth,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.xiaofangtang.model.Teacher">
+    update teacher
+    set tname = #{tname,jdbcType=VARCHAR},
+      bumenid = #{bumenid,jdbcType=INTEGER},
+      nickname = #{nickname,jdbcType=VARCHAR},
+      password = #{password,jdbcType=VARCHAR},
+      quanxian = #{quanxian,jdbcType=INTEGER},
+      ruzhitime = #{ruzhitime,jdbcType=VARCHAR},
+      birth = #{birth,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

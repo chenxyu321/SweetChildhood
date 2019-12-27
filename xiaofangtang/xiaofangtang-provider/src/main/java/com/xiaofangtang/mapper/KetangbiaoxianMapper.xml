@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xiaofangtang.mapper.KetangbiaoxianMapper">
+  <resultMap id="BaseResultMap" type="com.xiaofangtang.model.Ketangbiaoxian">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="sid" jdbcType="VARCHAR" property="sid" />
+    <result column="cid" jdbcType="VARCHAR" property="cid" />
+    <result column="zid" jdbcType="VARCHAR" property="zid" />
+    <result column="teacher" jdbcType="VARCHAR" property="teacher" />
+    <result column="time" jdbcType="VARCHAR" property="time" />
+    <result column="jilv" jdbcType="VARCHAR" property="jilv" />
+    <result column="zhanxiannum" jdbcType="VARCHAR" property="zhanxiannum" />
+    <result column="biaoxian" jdbcType="VARCHAR" property="biaoxian" />
+    <result column="text1" jdbcType="VARCHAR" property="text1" />
+    <result column="text2" jdbcType="VARCHAR" property="text2" />
+    <result column="text3" jdbcType="VARCHAR" property="text3" />
+    <result column="jihua" jdbcType="VARCHAR" property="jihua" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, sid, cid, zid, teacher, time, jilv, zhanxiannum, biaoxian, text1, text2, text3, 
+    jihua
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from ketangbiaoxian
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+
+  <select id="getketangbiaoxian" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from ketangbiaoxian
+  </select>
+
+  <select id="getketangbiaoxianBystudent" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from ketangbiaoxian
+    where sid = #{sid,jdbcType=INTEGER}
+  </select>
+
+  <select id="getketangbiaoxianBystudentandclass" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from ketangbiaoxian
+    where sid = #{0} and cid = #{1}
+  </select>
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from ketangbiaoxian
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.xiaofangtang.model.Ketangbiaoxian">
+    insert into ketangbiaoxian (id, sid, cid, 
+      zid, teacher, time, 
+      jilv, zhanxiannum, biaoxian, 
+      text1, text2, text3, 
+      jihua)
+    values (#{id,jdbcType=INTEGER}, #{sid,jdbcType=VARCHAR}, #{cid,jdbcType=VARCHAR}, 
+      #{zid,jdbcType=VARCHAR}, #{teacher,jdbcType=VARCHAR}, #{time,jdbcType=VARCHAR}, 
+      #{jilv,jdbcType=VARCHAR}, #{zhanxiannum,jdbcType=VARCHAR}, #{biaoxian,jdbcType=VARCHAR}, 
+      #{text1,jdbcType=VARCHAR}, #{text2,jdbcType=VARCHAR}, #{text3,jdbcType=VARCHAR}, 
+      #{jihua,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.xiaofangtang.model.Ketangbiaoxian">
+    insert into ketangbiaoxian
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="sid != null">
+        sid,
+      </if>
+      <if test="cid != null">
+        cid,
+      </if>
+      <if test="zid != null">
+        zid,
+      </if>
+      <if test="teacher != null">
+        teacher,
+      </if>
+      <if test="time != null">
+        time,
+      </if>
+      <if test="jilv != null">
+        jilv,
+      </if>
+      <if test="zhanxiannum != null">
+        zhanxiannum,
+      </if>
+      <if test="biaoxian != null">
+        biaoxian,
+      </if>
+      <if test="text1 != null">
+        text1,
+      </if>
+      <if test="text2 != null">
+        text2,
+      </if>
+      <if test="text3 != null">
+        text3,
+      </if>
+      <if test="jihua != null">
+        jihua,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="sid != null">
+        #{sid,jdbcType=VARCHAR},
+      </if>
+      <if test="cid != null">
+        #{cid,jdbcType=VARCHAR},
+      </if>
+      <if test="zid != null">
+        #{zid,jdbcType=VARCHAR},
+      </if>
+      <if test="teacher != null">
+        #{teacher,jdbcType=VARCHAR},
+      </if>
+      <if test="time != null">
+        #{time,jdbcType=VARCHAR},
+      </if>
+      <if test="jilv != null">
+        #{jilv,jdbcType=VARCHAR},
+      </if>
+      <if test="zhanxiannum != null">
+        #{zhanxiannum,jdbcType=VARCHAR},
+      </if>
+      <if test="biaoxian != null">
+        #{biaoxian,jdbcType=VARCHAR},
+      </if>
+      <if test="text1 != null">
+        #{text1,jdbcType=VARCHAR},
+      </if>
+      <if test="text2 != null">
+        #{text2,jdbcType=VARCHAR},
+      </if>
+      <if test="text3 != null">
+        #{text3,jdbcType=VARCHAR},
+      </if>
+      <if test="jihua != null">
+        #{jihua,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.xiaofangtang.model.Ketangbiaoxian">
+    update ketangbiaoxian
+    <set>
+      <if test="sid != null">
+        sid = #{sid,jdbcType=VARCHAR},
+      </if>
+      <if test="cid != null">
+        cid = #{cid,jdbcType=VARCHAR},
+      </if>
+      <if test="zid != null">
+        zid = #{zid,jdbcType=VARCHAR},
+      </if>
+      <if test="teacher != null">
+        teacher = #{teacher,jdbcType=VARCHAR},
+      </if>
+      <if test="time != null">
+        time = #{time,jdbcType=VARCHAR},
+      </if>
+      <if test="jilv != null">
+        jilv = #{jilv,jdbcType=VARCHAR},
+      </if>
+      <if test="zhanxiannum != null">
+        zhanxiannum = #{zhanxiannum,jdbcType=VARCHAR},
+      </if>
+      <if test="biaoxian != null">
+        biaoxian = #{biaoxian,jdbcType=VARCHAR},
+      </if>
+      <if test="text1 != null">
+        text1 = #{text1,jdbcType=VARCHAR},
+      </if>
+      <if test="text2 != null">
+        text2 = #{text2,jdbcType=VARCHAR},
+      </if>
+      <if test="text3 != null">
+        text3 = #{text3,jdbcType=VARCHAR},
+      </if>
+      <if test="jihua != null">
+        jihua = #{jihua,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.xiaofangtang.model.Ketangbiaoxian">
+    update ketangbiaoxian
+    set sid = #{sid,jdbcType=VARCHAR},
+      cid = #{cid,jdbcType=VARCHAR},
+      zid = #{zid,jdbcType=VARCHAR},
+      teacher = #{teacher,jdbcType=VARCHAR},
+      time = #{time,jdbcType=VARCHAR},
+      jilv = #{jilv,jdbcType=VARCHAR},
+      zhanxiannum = #{zhanxiannum,jdbcType=VARCHAR},
+      biaoxian = #{biaoxian,jdbcType=VARCHAR},
+      text1 = #{text1,jdbcType=VARCHAR},
+      text2 = #{text2,jdbcType=VARCHAR},
+      text3 = #{text3,jdbcType=VARCHAR},
+      jihua = #{jihua,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

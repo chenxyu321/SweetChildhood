@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/qingying.iml" filepath="$PROJECT_DIR$/qingying.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qingyingclub-consumer/qingyingclub-consumer.iml" filepath="$PROJECT_DIR$/qingyingclub-consumer/qingyingclub-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qingyingclub-interface/qingyingclub-interface.iml" filepath="$PROJECT_DIR$/qingyingclub-interface/qingyingclub-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qingyingclub-provider/qingyingclub-provider.iml" filepath="$PROJECT_DIR$/qingyingclub-provider/qingyingclub-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xiaofangtang-consumer/xiaofangtang-consumer.iml" filepath="$PROJECT_DIR$/xiaofangtang-consumer/xiaofangtang-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xiaofangtang-interface/xiaofangtang-interface.iml" filepath="$PROJECT_DIR$/xiaofangtang-interface/xiaofangtang-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xiaofangtang-provider/xiaofangtang-provider.iml" filepath="$PROJECT_DIR$/xiaofangtang-provider/xiaofangtang-provider.iml" />
+    </modules>
+  </component>
+</project>

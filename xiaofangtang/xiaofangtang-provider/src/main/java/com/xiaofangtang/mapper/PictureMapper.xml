@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xiaofangtang.mapper.PictureMapper">
+  <resultMap id="BaseResultMap" type="com.xiaofangtang.model.Picture">
+    <id column="picid" jdbcType="INTEGER" property="picid" />
+    <result column="pictext" jdbcType="VARCHAR" property="pictext" />
+    <result column="picpath" jdbcType="VARCHAR" property="picpath" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    picid, pictext, picpath
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from picture
+    where picid = #{picid,jdbcType=INTEGER}
+  </select>
+
+  <select id="getpicture" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from picture
+  </select>
+
+  <select id="getpictureByclass" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from picture
+    where pictext = #{classes,jdbcType=VARCHAR}
+  </select>
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from picture
+    where picid = #{picid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.xiaofangtang.model.Picture">
+    insert into picture (picid, pictext, picpath
+      )
+    values (#{picid,jdbcType=INTEGER}, #{pictext,jdbcType=VARCHAR}, #{picpath,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.xiaofangtang.model.Picture">
+    insert into picture
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="picid != null">
+        picid,
+      </if>
+      <if test="pictext != null">
+        pictext,
+      </if>
+      <if test="picpath != null">
+        picpath,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="picid != null">
+        #{picid,jdbcType=INTEGER},
+      </if>
+      <if test="pictext != null">
+        #{pictext,jdbcType=VARCHAR},
+      </if>
+      <if test="picpath != null">
+        #{picpath,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.xiaofangtang.model.Picture">
+    update picture
+    <set>
+      <if test="pictext != null">
+        pictext = #{pictext,jdbcType=VARCHAR},
+      </if>
+      <if test="picpath != null">
+        picpath = #{picpath,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where picid = #{picid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.xiaofangtang.model.Picture">
+    update picture
+    set pictext = #{pictext,jdbcType=VARCHAR},
+      picpath = #{picpath,jdbcType=VARCHAR}
+    where picid = #{picid,jdbcType=INTEGER}
+  </update>
+</mapper>

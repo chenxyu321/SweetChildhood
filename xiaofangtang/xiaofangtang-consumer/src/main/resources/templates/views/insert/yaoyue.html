@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>添加邀约信息</title>
+    <!-- for-mobile-apps -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+    function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- //for-mobile-apps -->
+    <!-- js -->
+    <script th:src="@{/js/jquery-2.1.3.min.js}" type="text/javascript"></script>
+    <!-- //js -->
+    <link th:href="@{/css/style.css}" rel="stylesheet" type="text/css" media="all" />
+    <!--<link href='//fonts.googleapis.com/css?family=Poppins:400,300,500,600,700' rel='stylesheet' type='text/css'>-->
+</head>
+<body>
+<div class="main">
+    <h1 class="w3layouts_head">添加邀约信息</h1>
+    <div class="w3layouts_main_grid">
+        <form action="/InsertYaoyue" method="post" class="w3_form_post">
+            <div class="w3_agileits_main_grid w3l_main_grid">
+					<span class="agileits_grid">
+						<label>学生姓名<i>:</i></label>
+						<input type="text" name="sname" placeholder="例：陈翔宇" required>
+					</span>
+            </div>
+
+            <div class="w3_agileits_main_grid w3l_main_grid">
+					<span class="agileits_grid">
+						<label>学生年龄<i>:</i></label>
+						<input type="text" name="sage" placeholder="例：3" required>
+					</span>
+            </div>
+
+            <div class="w3_agileits_main_grid w3l_main_grid">
+					<span class="agileits_grid">
+						<label>电话<i>:</i></label>
+						<input type="text" name="tel" placeholder="例：15668355607" required>
+					</span>
+            </div>
+
+            <div class="w3_agileits_main_grid w3l_main_grid">
+					<span class="agileits_grid">
+						<label>邀约课程<i>:</i></label>
+                        <select name="classes" required>
+                            <option value="1">口才主持</option>
+                            <option value="2">少儿编程</option>
+                            <option value="3">机器人编程</option>
+                            <option value="4">潜能开发</option>
+                        </select>
+					</span>
+            </div>
+
+            <div class="w3_agileits_main_grid w3l_main_grid">
+					<span class="agileits_grid">
+						<label>性别<i>:</i></label>
+						<select name="ssex" required>
+                            <option value="男">男</option>
+                            <option value="女">女</option>
+                        </select>
+					</span>
+            </div>
+
+            <div class="w3_agileits_main_grid w3l_main_grid">
+					<span class="agileits_grid">
+						<label>是否加微信<i>:</i></label>
+						<select name="iswx" required>
+                            <option value="是">是</option>
+                            <option value="否">否</option>
+                        </select>
+					</span>
+            </div>
+
+            <div class="w3_agileits_main_grid w3l_main_grid">
+					<span class="agileits_grid">
+						<label>邀约时间<i>:</i></label>
+						<input type="text" name="time" placeholder="例：2019年12月3日" required>
+					</span>
+            </div>
+
+            <div class="w3_agileits_main_grid w3l_main_grid">
+					<span class="agileits_grid">
+						<label>备注信息<i>:</i></label>
+						<input type="text" name="info" placeholder="例：周六下午" required>
+					</span>
+            </div>
+
+            <div class="w3_agileits_main_grid w3l_main_grid">
+					<span class="agileits_grid">
+						<label>是否到访<i>:</i></label>
+						<select name="daofang" required>
+                            <option value="1">是</option>
+                            <option value="0">否</option>
+                        </select>
+					</span>
+            </div>
+
+            <div class="w3_agileits_main_grid w3l_main_grid">
+					<span class="agileits_grid">
+						<label>邀约教师<i>:</i></label>
+						<select name="tname" required>
+                            <option th:each="t:${teacher}" th:value="${t.id}" th:text="${t.nickname}"></option>
+                        </select>
+					</span>
+            </div>
+
+            <div class="w3_agileits_main_grid w3l_main_grid">
+					<span class="agileits_grid">
+						<label>其他名字/小名<i>:</i></label>
+						<input type="text" name="othername" placeholder="例：小陈，如果没有可以留空">
+					</span>
+            </div>
+
+            <div class="w3_main_grid">
+                <div class="w3_main_grid_right">
+                    <input type="submit" value="添加">
+                </div>
+                <div class="clear"> </div>
+            </div>
+        </form>
+    </div>
+    <!-- Calendar -->
+    <link rel="stylesheet" th:href="@{/css/jquery-ui.css}" />
+    <script th:src="@{/js/jquery-ui.js}"></script>
+    <script>
+        $(function() {
+            $( "#datepicker" ).datepicker();
+        });
+    </script>
+</div>
+</body>
+</html>

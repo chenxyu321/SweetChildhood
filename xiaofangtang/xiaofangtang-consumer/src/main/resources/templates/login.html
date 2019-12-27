@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>后台管理登录</title>
+	<link th:href="@{/css/auth.css}" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div class="lowin">
+		<div class="lowin-brand">
+			<img th:src="@{/images/kodinger.jpg}" alt="logo"/>
+		</div>
+		<div class="lowin-wrapper">
+			<div class="lowin-box lowin-login">
+				<div class="lowin-box-inner">
+					<form action="/adminLogin" method="post">
+						<p>请登录以继续</p>
+						<div class="lowin-group">
+							<label>用户名 </label>
+							<input type="text" autocomplete="text" name="username" class="lowin-input">
+						</div>
+						<div class="lowin-group password-group">
+							<label>密码</label>
+							<input type="password" name="password" autocomplete="current-password" class="lowin-input">
+						</div>
+						<button class="lowin-btn login-btn" type="submit">
+							登录
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

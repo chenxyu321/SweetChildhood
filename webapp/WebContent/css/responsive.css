@@ -1,0 +1,405 @@
+/* Gaowa - Child Care and KinderGarten HTML Template  */
+
+@media only screen and (max-width: 1139px){
+
+	.main-header .header-top .info-list,
+	.main-header .header-upper .social-links{
+		display: none;
+	}
+
+	.main-footer .links-widget,
+	.event-single .content-column .inner-column,
+	.welcome-section .content-column .inner-column{
+		padding-left: 0;
+	}
+
+	.faq-section .image-column .inner-column,
+	.video-section .content-column .inner-column,
+	.video-section .video-column .inner-column,
+	.welcome-section .image-column .inner-column{
+		padding: 0;
+	}
+
+	.program-block .lower-content{
+		padding: 55px 40px 0;
+	}
+
+	.call-to-action h2,
+	.sec-title h2{
+		font-size: 40px;
+		line-height: 1.2em;
+	}
+
+	.banner-carousel .content-box h2{
+		font-size: 80px;
+	}
+
+	.header-style-two .header-top .info-list{
+		display: block;
+	}
+
+	.event-single .venue-block .inner-box,
+	.event-single .organize-block .inner-box{
+		padding: 55px 40px 52px;
+	}
+
+	.program-single .program-info .inner{
+		padding: 35px 30px 30px;
+	}
+
+	.program-single .content-box h2{
+		font-size: 40px;
+	}
+
+	.sidebar-widget,
+	.sidebar .search-box{
+		padding: 50px 20px;
+	}
+}
+
+@media only screen and (min-width: 768px){
+	.main-menu .navigation > li > ul,
+	.main-menu .navigation > li > ul > li > ul{
+		display:block !important;
+		visibility:hidden;
+		opacity:0;
+	}
+}
+
+@media only screen and (max-width: 1023px){
+	.main-header .nav-outer .main-menu,
+	.sticky-header{
+		display: none !important;
+	}
+
+	.nav-outer .mobile-nav-toggler{
+		display: block;
+		margin: 0;
+		padding: 30px 0;
+		margin-left: 20px;
+	}
+
+	.call-to-action .btn-box,
+	.call-to-action h2{
+		width: 100%;
+		text-align: center;
+	}
+
+	.call-to-action h2 br{
+		display: none;
+	}
+
+	.newsletter-section .title-column .inner-column{
+		padding-top: 0;
+		text-align: center;
+	}
+
+	.header-style-two .header-upper .logo-outer{
+		left: 15px;
+		-webkit-transform: none;
+		-ms-transform: none;
+		transform: none;
+	}
+
+	.header-style-two .header-upper .logo:before{
+		display: none;
+	}
+
+	.page-banner h1{
+		font-size: 80px;
+	}
+
+	.event-calendar{
+		overflow-x: auto;
+	}
+	
+	.event-calendar .title-box{
+		text-align:left;	
+	}
+	
+	.event-calendar .title-box{
+		text-align:left;
+		margin-bottom:30px;	
+	}
+	
+	.event-calendar .title-box h2{
+		font-size:30px;	
+	}
+}
+
+@media only screen and (max-width: 767px){	
+	.header-style-two .header-top .info-list,
+	.banner-carousel .content-box .icon-box,
+	.banner-section .banner-navigation{
+		display: none;
+	}
+
+	.banner-carousel .content-box{
+		padding: 0;
+	}
+
+	.call-to-action,
+	.clients-section,
+	.welcome-section-two,
+	.activities-section,
+	.testimonial-section,
+	.news-section-two{
+		padding: 70px 0;
+	}
+
+	.video-section,
+	.fun-fact-section{
+		padding: 70px 0 20px;
+	}
+
+	.faq-section,
+	.newsletter-section,
+	.main-footer .footer-upper{
+		padding: 70px 0 30px;
+	}
+
+	.team-section,
+	.events-section,
+	.program-section,
+	.offers-section{
+		padding: 70px 0 40px;
+	}
+	
+	.events-section.events-page{
+		padding: 70px 0;
+	}
+
+	.main-footer .footer-bottom{
+		padding: 20px 0;
+	}
+
+	.events-page-section,
+	.call-to-action.alternate{
+		padding: 70px 0 100px;
+	}
+
+	.welcome-section{
+		padding-bottom: 20px;
+	}
+
+	.subscribe-form .form-group{
+		padding: 0;
+	}
+
+	.subscribe-form .form-group input[type="submit"], 
+	.subscribe-form .form-group button{
+		position: relative;
+		width: 100%;
+		display: block;
+		margin-top: 20px;
+	}
+
+	.main-footer .footer-bottom .copyright,
+	.main-footer .footer-bottom .social-icon-two{
+		width: 100%;
+	}
+
+	.main-header .header-upper .logo:before,
+	.main-header .header-upper .logo-outer:before{
+		display: none;
+	}
+
+	.news-section-two.style-two,
+	.about-section{
+		padding: 100px 0 50px;
+	}
+
+	.page-banner{
+		padding: 100px 0;
+	}
+
+	.program-section.style-two{
+		padding: 100px 0 70px;
+	}
+
+	.page-banner h1{
+		font-size: 60px;
+		line-height: 1.2em;
+	}
+
+	.event-day .overlay-link{
+		opacity: 1;
+		visibility: visible;
+	}
+
+	.event-day .event-popup{
+		display: none;
+	}
+
+	.event-single{
+		padding: 100px 0 70px;
+	}
+
+	.event-single .venue-block,
+	.event-single .organize-block{
+		min-height: auto;
+	}
+
+	.program-single{
+		padding: 100px 0 50px;
+	}
+
+	.news-detail .lower-content h3{
+		font-size: 30px;
+	}
+
+	.contact-section{
+		padding: 100px 0 70px;
+	}
+	
+	.main-header .header-top{
+		text-align:center;	
+	}
+	
+	.main-header .header-top .top-right{
+		width:100%;	
+	}
+	
+	.header-style-two .social-icon-two li,
+	.main-header .header-top .login-info li{
+		margin:0px 10px;
+		display:inline-block;
+		float:none;	
+	}
+}
+
+@media only screen and (max-width: 599px){
+	.sidebar-page-container .group-title h3,
+	.event-single .content-column h2,
+	.call-to-action h2{
+		font-size: 30px;
+	}
+
+	.news-block h3{
+		font-size: 26px;
+		line-height: 1.2em;
+	}
+
+	.about-section .sec-title h2 br{
+		display: none;
+	}
+
+	.team-block .info-box{
+		padding-left: 0;
+	}
+
+	.team-block .image-box{
+		position: relative;
+		width: 100%;
+	}
+
+	.team-block .image-box .image{
+		display: block;
+		margin-bottom: 0;
+	}
+
+	.team-block .info-box .inner{
+		padding: 50px 20px 40px;
+	}
+
+	.team-block .info-box .designation{
+		margin-bottom: 20px;
+	}
+
+	.testimonial-block .inner-box{
+		padding: 70px 20px;
+	}
+
+	.testimonial-block .text{
+		font-size: 24px;
+		line-height: 1.2em;
+	}
+
+	.testimonial-block .inner-box:before, 
+	.testimonial-block .inner-box:after{
+		display: none;
+	}
+
+	.banner-carousel .content-box h2{
+		font-size: 50px;
+	}
+
+	.banner-carousel .content-box .title{
+		font-size: 20px;
+	}
+
+	.welcome-section-two .text{
+		line-height: 1.3em;
+	}
+
+	.event-block .inner-box{
+		padding: 50px 20px;
+	}
+
+	.event-block .date{
+		position: relative;
+		left: 0;
+		top: 0;
+		margin-bottom: 30px;
+	}
+
+	.banner-section.style-two .banner-carousel .slide-item{
+		padding: 120px 0;
+	}
+
+	.about-section .text-block .inner-box{
+		padding: 30px 20px;
+	}
+
+	.program-block .lower-content{
+		padding: 55px 30px 0;
+	}
+
+	.news-detail .post-share-options div{
+		width: 100%;
+		margin-top: 20px;
+	}
+
+	.news-detail .post-share-options .tags li{
+		margin-bottom: 10px;
+	}
+
+	.author-box .name{
+		margin-bottom: 15px;
+	}
+
+	.author-box{
+		padding: 40px 20px;
+	}
+
+	.author-box .inner-box{
+		padding-left: 0;
+		text-align: center;
+	}
+
+	.sidebar-page-container .comments-area .comment-box .author-thumb,
+	.author-box .image-box{
+		position: relative;
+		display: inline-block;
+		margin-bottom: 20px;
+	}
+
+	.sidebar-page-container .comments-area .comment{
+		padding-left: 0;
+	}
+
+	.sidebar-page-container .comments-area .comment-box .reply-outer{
+		position: relative;
+		display: inline-block;
+		margin-top: 20px;
+	}
+
+	.news-detail .post-share-options .social-icon-one li{
+		margin-left: 0;
+		margin-right: 20px;
+	}
+}
+
+@media only screen and (max-width: 479px) {
+
+}

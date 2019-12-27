@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xiaofangtang.mapper.ShangkeMapper">
+  <resultMap id="BaseResultMap" type="com.xiaofangtang.model.Shangke">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="sid" jdbcType="VARCHAR" property="sid" />
+    <result column="classes" jdbcType="VARCHAR" property="classes" />
+    <result column="time" jdbcType="VARCHAR" property="time" />
+    <result column="teacher" jdbcType="VARCHAR" property="teacher" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, sid, classes, time, teacher
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from shangke
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+
+  <select id="getshangke" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from shangke
+  </select>
+
+  <select id="getshangkeBystudent" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from shangke
+    where sid = #{id,jdbcType=INTEGER} order by id desc
+  </select>
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from shangke
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.xiaofangtang.model.Shangke">
+    insert into shangke (id, sid, classes, 
+      time, teacher)
+    values (#{id,jdbcType=INTEGER}, #{sid,jdbcType=VARCHAR}, #{classes,jdbcType=VARCHAR}, 
+      #{time,jdbcType=VARCHAR}, #{teacher,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.xiaofangtang.model.Shangke">
+    insert into shangke
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="sid != null">
+        sid,
+      </if>
+      <if test="classes != null">
+        classes,
+      </if>
+      <if test="time != null">
+        time,
+      </if>
+      <if test="teacher != null">
+        teacher,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="sid != null">
+        #{sid,jdbcType=VARCHAR},
+      </if>
+      <if test="classes != null">
+        #{classes,jdbcType=VARCHAR},
+      </if>
+      <if test="time != null">
+        #{time,jdbcType=VARCHAR},
+      </if>
+      <if test="teacher != null">
+        #{teacher,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.xiaofangtang.model.Shangke">
+    update shangke
+    <set>
+      <if test="sid != null">
+        sid = #{sid,jdbcType=VARCHAR},
+      </if>
+      <if test="classes != null">
+        classes = #{classes,jdbcType=VARCHAR},
+      </if>
+      <if test="time != null">
+        time = #{time,jdbcType=VARCHAR},
+      </if>
+      <if test="teacher != null">
+        teacher = #{teacher,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.xiaofangtang.model.Shangke">
+    update shangke
+    set sid = #{sid,jdbcType=VARCHAR},
+      classes = #{classes,jdbcType=VARCHAR},
+      time = #{time,jdbcType=VARCHAR},
+      teacher = #{teacher,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

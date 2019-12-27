@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a4d9fbf0-2928-4e31-9529-6ad897dcd7fa" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="xiaofangtang" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="package.json" />
+        <option value="CSS File" />
+        <option value="HTML File" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="D:/apache-maven-3.6.1" />
+        <option name="userSettingsFile" value="D:\apache-maven-3.6.1\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1TDpzbqX6vi87nqD7uYj3QhSq3W" />
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/xiaofangtang-consumer/src/main/resources/templates/views" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\java\qingying\qingyingclub-consumer\src\main\resources\static\css" />
+      <recent name="D:\java\qingying\qingyingclub-consumer\src\main\resources\static" />
+      <recent name="D:\java\qingying\qingyingclub-consumer\src\main\resources\templates\static" />
+      <recent name="D:\java\qingying\qingyingclub-consumer\src\main\resources\templates" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.xiaofangtang.model" />
+      <recent name="com.qingying.controller" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\java\xiaofangtang\xiaofangtang-consumer\src\main\resources\templates\views" />
+      <recent name="D:\java\xiaofangtang\xiaofangtang-provider\src\main\java\com\xiaofangtang\mapper" />
+      <recent name="D:\java\xiaofangtang\xiaofangtang-consumer\src\main\resources\templates\views\home" />
+      <recent name="D:\java\xiaofangtang\xiaofangtang-consumer\src\main\resources\templates\views\insert" />
+      <recent name="D:\java\xiaofangtang\xiaofangtang-consumer\src\main\resources\templates\views\component\table" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.XiaofangtangConsumerApplication">
+    <configuration name="QingyingclubProviderApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.qingying.QingyingclubProviderApplication" />
+      <module name="qingyingclub-provider" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.qingying.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in qingyingclub-provider (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="qingyingclub-provider" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in qingyingclub-provider" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="qingyingclub-provider" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QingyingclubConsumerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="qingyingclub-consumer" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.qingying.QingyingclubConsumerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QingyingclubProviderApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="qingyingclub-provider" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.qingying.QingyingclubProviderApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="XiaofangtangConsumerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="xiaofangtang-consumer" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xiaofangtang.XiaofangtangConsumerApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="XiaofangtangProviderApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="xiaofangtang-provider" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xiaofangtang.XiaofangtangProviderApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment />
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="_xiaofangtang" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="51533" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Remote" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="LOCAL" value="false" />
+      <deployment />
+      <server-settings>
+        <data>
+          <option name="targets">
+            <list>
+              <WatchedTargetModelImpl>
+                <option name="name" value="CONTEXT_XML" />
+                <name>CONTEXT_XML</name>
+              </WatchedTargetModelImpl>
+              <StagingTargetModelImpl>
+                <option name="name" value="STAGING" />
+                <name>STAGING</name>
+              </StagingTargetModelImpl>
+            </list>
+          </option>
+          <option name="transportHostId" />
+        </data>
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="TOMCAT_LOCALHOST_LOG_ID" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="51540" />
+        <option name="LOCAL" value="false" />
+      </RunnerSettings>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.QingyingclubProviderApplication" />
+      <item itemvalue="JUnit.All in qingyingclub-provider" />
+      <item itemvalue="JUnit.All in qingyingclub-provider (1)" />
+      <item itemvalue="Spring Boot.QingyingclubConsumerApplication" />
+      <item itemvalue="Spring Boot.QingyingclubProviderApplication" />
+      <item itemvalue="Spring Boot.XiaofangtangConsumerApplication" />
+      <item itemvalue="Spring Boot.XiaofangtangProviderApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.QingyingclubProviderApplication" />
+        <item itemvalue="JUnit.All in qingyingclub-provider (1)" />
+        <item itemvalue="JUnit.All in qingyingclub-provider" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a4d9fbf0-2928-4e31-9529-6ad897dcd7fa" name="Default Changelist" comment="" />
+      <created>1573004783373</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1573004783373</updated>
+      <workItem from="1573004787819" duration="14333000" />
+      <workItem from="1573084398375" duration="4732000" />
+      <workItem from="1573089323507" duration="3097000" />
+      <workItem from="1573092734166" duration="19909000" />
+      <workItem from="1573117590253" duration="1728000" />
+      <workItem from="1573171154351" duration="27979000" />
+      <workItem from="1573430504589" duration="496000" />
+      <workItem from="1574135433259" duration="1195000" />
+      <workItem from="1574209738631" duration="21508000" />
+      <workItem from="1574295287236" duration="27685000" />
+      <workItem from="1574381441886" duration="27153000" />
+      <workItem from="1574640173041" duration="994000" />
+      <workItem from="1574726604676" duration="1282000" />
+      <workItem from="1574728936880" duration="9000" />
+      <workItem from="1574747268036" duration="8969000" />
+      <workItem from="1574835580424" duration="965000" />
+      <workItem from="1574836746743" duration="9850000" />
+      <workItem from="1574898561856" duration="608000" />
+      <workItem from="1574899197794" duration="25376000" />
+      <workItem from="1574930540396" duration="2490000" />
+      <workItem from="1574985610607" duration="20529000" />
+      <workItem from="1575094756328" duration="6832000" />
+      <workItem from="1575120969682" duration="5075000" />
+      <workItem from="1575196736159" duration="4553000" />
+      <workItem from="1575245005996" duration="22835000" />
+      <workItem from="1575335622011" duration="22705000" />
+      <workItem from="1575417049397" duration="3450000" />
+      <workItem from="1575423681929" duration="5307000" />
+      <workItem from="1575530266439" duration="6305000" />
+      <workItem from="1575590501141" duration="7000" />
+      <workItem from="1575599535373" duration="17610000" />
+      <workItem from="1575848473869" duration="3482000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="SpringBootApplicationConfigurationType">
+        <watch expression="yaoyue.sname" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>

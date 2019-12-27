@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xiaofangtang.mapper.HuifangMapper">
+  <resultMap id="BaseResultMap" type="com.xiaofangtang.model.Huifang">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="yid" jdbcType="VARCHAR" property="yid" />
+    <result column="huifanginfo" jdbcType="VARCHAR" property="huifanginfo" />
+    <result column="huifangteacher" jdbcType="VARCHAR" property="huifangteacher" />
+    <result column="huifangtime" jdbcType="VARCHAR" property="huifangtime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, yid, huifanginfo, huifangteacher, huifangtime
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from huifang
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+
+  <select id="gethuifang" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from huifang
+  </select>
+
+  <select id="gethuifangByyaoyueid" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from huifang
+    where yid = #{yid,jdbcType=INTEGER}
+  </select>
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from huifang
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.xiaofangtang.model.Huifang">
+    insert into huifang (id, yid, huifanginfo, 
+      huifangteacher, huifangtime)
+    values (#{id,jdbcType=INTEGER}, #{yid,jdbcType=VARCHAR}, #{huifanginfo,jdbcType=VARCHAR}, 
+      #{huifangteacher,jdbcType=VARCHAR}, #{huifangtime,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.xiaofangtang.model.Huifang">
+    insert into huifang
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="yid != null">
+        yid,
+      </if>
+      <if test="huifanginfo != null">
+        huifanginfo,
+      </if>
+      <if test="huifangteacher != null">
+        huifangteacher,
+      </if>
+      <if test="huifangtime != null">
+        huifangtime,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="yid != null">
+        #{yid,jdbcType=VARCHAR},
+      </if>
+      <if test="huifanginfo != null">
+        #{huifanginfo,jdbcType=VARCHAR},
+      </if>
+      <if test="huifangteacher != null">
+        #{huifangteacher,jdbcType=VARCHAR},
+      </if>
+      <if test="huifangtime != null">
+        #{huifangtime,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.xiaofangtang.model.Huifang">
+    update huifang
+    <set>
+      <if test="yid != null">
+        yid = #{yid,jdbcType=VARCHAR},
+      </if>
+      <if test="huifanginfo != null">
+        huifanginfo = #{huifanginfo,jdbcType=VARCHAR},
+      </if>
+      <if test="huifangteacher != null">
+        huifangteacher = #{huifangteacher,jdbcType=VARCHAR},
+      </if>
+      <if test="huifangtime != null">
+        huifangtime = #{huifangtime,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.xiaofangtang.model.Huifang">
+    update huifang
+    set yid = #{yid,jdbcType=VARCHAR},
+      huifanginfo = #{huifanginfo,jdbcType=VARCHAR},
+      huifangteacher = #{huifangteacher,jdbcType=VARCHAR},
+      huifangtime = #{huifangtime,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

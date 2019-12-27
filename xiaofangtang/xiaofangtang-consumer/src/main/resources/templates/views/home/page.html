@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <title>首页</title>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <link rel="stylesheet" href="../../layuiadmin/layui/css/layui.css" media="all">
+  <link rel="stylesheet" href="../../layuiadmin/style/admin.css" media="all">
+</head>
+<body>
+  <div class="layui-fluid">
+    <div class="layui-row layui-col-space15">
+          <div class="layui-col-md12" id="main">
+            <div class="layui-card">
+              <div class="layui-card-header">恭喜您已经登录成功下面是一些本系统的约定请严格遵守</div>
+              <div class="layui-card-body">
+                新建学生规则：id为日期+00-99随意，例：2019120300</br></br>
+                日期规则：只需要输入年月日，例：2019年12月3日</br></br>
+                删除规则：有依赖关系的不允许删除否则系统会崩溃，例：删除学生时一定要确保别的表中没有任何这个学生的信息才可以删除</br></br>
+                修改规则：有些不能修改的内容建议删除从重新新建</br></br>
+                课程id对应课程规则</br>
+                1 = "口才主持";</br>
+                2 = "少儿编程";</br>
+                3 = "机器人编程";</br>
+                4 = "潜能开发";</br></br>
+                0,1对应规则</br>
+                0: = "关闭";</br>
+                1: = "开启";</br></br>
+                暂不提供文件上传功能只可以修改图片文件地址，如果需要上传图片请找到会操作服务器的老师，连接上服务器以后保存在指定目录，指定如下：</br>
+                主页上课学生照片目录：images/Student/xxx.jpg,数据库字段填写规则：images/Student/xxx.jpg</br>
+                学生照片目录：images/smininfo/xxx.jpg,数据库字段填写规则：../images/smininfo/xxx.jpg</br>
+                新闻照片目录：images/news/xxx.jpg,数据库字段填写规则：../images/news/xxx.jpg</br>
+                如果第一次使用可能会有目录不存在，如不存在请手动创建后续将不再需要创建，请严格遵守约定否则图片将无法读取。</br></br>
+                新生注册流程：</br>
+                注册好学生之后一定要为家长开通家长后台账号，这样家长可以登录我们的后台系统查看孩子情况。</br></br>
+                编者的话：最后祝各位老师身体健康，工作顺利，开开心心。</br>
+              </div>
+            </div>
+          </div>
+    </div>
+  </div>
+  <script src="../../layuiadmin/layui/layui.js?t=1"></script>  
+  <script>
+  layui.config({
+    base: '../../layuiadmin/' //静态资源所在路径
+  }).extend({
+    index: 'lib/index' //主入口模块
+  }).use(['index', 'console']);
+  </script>
+
+</body>
+</html>
+

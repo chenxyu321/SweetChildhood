@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xiaofangtang.mapper.SmininfoMapper">
+  <resultMap id="BaseResultMap" type="com.xiaofangtang.model.Smininfo">
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="sname" jdbcType="VARCHAR" property="sname" />
+    <result column="ssex" jdbcType="VARCHAR" property="ssex" />
+    <result column="sbirth" jdbcType="VARCHAR" property="sbirth" />
+    <result column="sminzu" jdbcType="VARCHAR" property="sminzu" />
+    <result column="snianji" jdbcType="VARCHAR" property="snianji" />
+    <result column="sjiguan" jdbcType="VARCHAR" property="sjiguan" />
+    <result column="stechang" jdbcType="VARCHAR" property="stechang" />
+    <result column="saihao" jdbcType="VARCHAR" property="saihao" />
+    <result column="slixiang" jdbcType="VARCHAR" property="slixiang" />
+    <result column="srongyu" jdbcType="VARCHAR" property="srongyu" />
+    <result column="saddress" jdbcType="VARCHAR" property="saddress" />
+    <result column="sinfo" jdbcType="VARCHAR" property="sinfo" />
+    <result column="sphotopath" jdbcType="VARCHAR" property="sphotopath" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, sname, ssex, sbirth, sminzu, snianji, sjiguan, stechang, saihao, slixiang, srongyu, 
+    saddress, sinfo, sphotopath
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from smininfo
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+
+  <select id="getsmininfo" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from smininfo
+  </select>
+
+  <select id="getsmininfoBystudent" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from smininfo
+    where id = #{sid,jdbcType=VARCHAR}
+  </select>
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from smininfo
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.xiaofangtang.model.Smininfo">
+    insert into smininfo (id, sname, ssex, 
+      sbirth, sminzu, snianji, 
+      sjiguan, stechang, saihao, 
+      slixiang, srongyu, saddress, 
+      sinfo, sphotopath)
+    values (#{id,jdbcType=VARCHAR}, #{sname,jdbcType=VARCHAR}, #{ssex,jdbcType=VARCHAR}, 
+      #{sbirth,jdbcType=VARCHAR}, #{sminzu,jdbcType=VARCHAR}, #{snianji,jdbcType=VARCHAR}, 
+      #{sjiguan,jdbcType=VARCHAR}, #{stechang,jdbcType=VARCHAR}, #{saihao,jdbcType=VARCHAR}, 
+      #{slixiang,jdbcType=VARCHAR}, #{srongyu,jdbcType=VARCHAR}, #{saddress,jdbcType=VARCHAR}, 
+      #{sinfo,jdbcType=VARCHAR}, #{sphotopath,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.xiaofangtang.model.Smininfo">
+    insert into smininfo
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="sname != null">
+        sname,
+      </if>
+      <if test="ssex != null">
+        ssex,
+      </if>
+      <if test="sbirth != null">
+        sbirth,
+      </if>
+      <if test="sminzu != null">
+        sminzu,
+      </if>
+      <if test="snianji != null">
+        snianji,
+      </if>
+      <if test="sjiguan != null">
+        sjiguan,
+      </if>
+      <if test="stechang != null">
+        stechang,
+      </if>
+      <if test="saihao != null">
+        saihao,
+      </if>
+      <if test="slixiang != null">
+        slixiang,
+      </if>
+      <if test="srongyu != null">
+        srongyu,
+      </if>
+      <if test="saddress != null">
+        saddress,
+      </if>
+      <if test="sinfo != null">
+        sinfo,
+      </if>
+      <if test="sphotopath != null">
+        sphotopath,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="sname != null">
+        #{sname,jdbcType=VARCHAR},
+      </if>
+      <if test="ssex != null">
+        #{ssex,jdbcType=VARCHAR},
+      </if>
+      <if test="sbirth != null">
+        #{sbirth,jdbcType=VARCHAR},
+      </if>
+      <if test="sminzu != null">
+        #{sminzu,jdbcType=VARCHAR},
+      </if>
+      <if test="snianji != null">
+        #{snianji,jdbcType=VARCHAR},
+      </if>
+      <if test="sjiguan != null">
+        #{sjiguan,jdbcType=VARCHAR},
+      </if>
+      <if test="stechang != null">
+        #{stechang,jdbcType=VARCHAR},
+      </if>
+      <if test="saihao != null">
+        #{saihao,jdbcType=VARCHAR},
+      </if>
+      <if test="slixiang != null">
+        #{slixiang,jdbcType=VARCHAR},
+      </if>
+      <if test="srongyu != null">
+        #{srongyu,jdbcType=VARCHAR},
+      </if>
+      <if test="saddress != null">
+        #{saddress,jdbcType=VARCHAR},
+      </if>
+      <if test="sinfo != null">
+        #{sinfo,jdbcType=VARCHAR},
+      </if>
+      <if test="sphotopath != null">
+        #{sphotopath,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.xiaofangtang.model.Smininfo">
+    update smininfo
+    <set>
+      <if test="sname != null">
+        sname = #{sname,jdbcType=VARCHAR},
+      </if>
+      <if test="ssex != null">
+        ssex = #{ssex,jdbcType=VARCHAR},
+      </if>
+      <if test="sbirth != null">
+        sbirth = #{sbirth,jdbcType=VARCHAR},
+      </if>
+      <if test="sminzu != null">
+        sminzu = #{sminzu,jdbcType=VARCHAR},
+      </if>
+      <if test="snianji != null">
+        snianji = #{snianji,jdbcType=VARCHAR},
+      </if>
+      <if test="sjiguan != null">
+        sjiguan = #{sjiguan,jdbcType=VARCHAR},
+      </if>
+      <if test="stechang != null">
+        stechang = #{stechang,jdbcType=VARCHAR},
+      </if>
+      <if test="saihao != null">
+        saihao = #{saihao,jdbcType=VARCHAR},
+      </if>
+      <if test="slixiang != null">
+        slixiang = #{slixiang,jdbcType=VARCHAR},
+      </if>
+      <if test="srongyu != null">
+        srongyu = #{srongyu,jdbcType=VARCHAR},
+      </if>
+      <if test="saddress != null">
+        saddress = #{saddress,jdbcType=VARCHAR},
+      </if>
+      <if test="sinfo != null">
+        sinfo = #{sinfo,jdbcType=VARCHAR},
+      </if>
+      <if test="sphotopath != null">
+        sphotopath = #{sphotopath,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.xiaofangtang.model.Smininfo">
+    update smininfo
+    set sname = #{sname,jdbcType=VARCHAR},
+      ssex = #{ssex,jdbcType=VARCHAR},
+      sbirth = #{sbirth,jdbcType=VARCHAR},
+      sminzu = #{sminzu,jdbcType=VARCHAR},
+      snianji = #{snianji,jdbcType=VARCHAR},
+      sjiguan = #{sjiguan,jdbcType=VARCHAR},
+      stechang = #{stechang,jdbcType=VARCHAR},
+      saihao = #{saihao,jdbcType=VARCHAR},
+      slixiang = #{slixiang,jdbcType=VARCHAR},
+      srongyu = #{srongyu,jdbcType=VARCHAR},
+      saddress = #{saddress,jdbcType=VARCHAR},
+      sinfo = #{sinfo,jdbcType=VARCHAR},
+      sphotopath = #{sphotopath,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+</mapper>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xiaofangtang.mapper.ChengguophotoMapper">
+  <resultMap id="BaseResultMap" type="com.xiaofangtang.model.Chengguophoto">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="photopath" jdbcType="VARCHAR" property="photopath" />
+    <result column="chengguoid" jdbcType="VARCHAR" property="chengguoid" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, photopath, chengguoid
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from chengguophoto
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+
+  <select id="getchengguophoto" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from chengguophoto
+  </select>
+
+  <select id="getchengguophotoBychengguo" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from chengguophoto
+    where chengguoid = #{chengguoid,jdbcType=VARCHAR}
+  </select>
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from chengguophoto
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.xiaofangtang.model.Chengguophoto">
+    insert into chengguophoto (id, photopath, chengguoid
+      )
+    values (#{id,jdbcType=INTEGER}, #{photopath,jdbcType=VARCHAR}, #{chengguoid,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.xiaofangtang.model.Chengguophoto">
+    insert into chengguophoto
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="photopath != null">
+        photopath,
+      </if>
+      <if test="chengguoid != null">
+        chengguoid,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="photopath != null">
+        #{photopath,jdbcType=VARCHAR},
+      </if>
+      <if test="chengguoid != null">
+        #{chengguoid,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.xiaofangtang.model.Chengguophoto">
+    update chengguophoto
+    <set>
+      <if test="photopath != null">
+        photopath = #{photopath,jdbcType=VARCHAR},
+      </if>
+      <if test="chengguoid != null">
+        chengguoid = #{chengguoid,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.xiaofangtang.model.Chengguophoto">
+    update chengguophoto
+    set photopath = #{photopath,jdbcType=VARCHAR},
+      chengguoid = #{chengguoid,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
